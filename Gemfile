@@ -1,8 +1,9 @@
 source 'https://rubygems.org'
 
-gem 'rails',     :git => 'git://github.com/rails/rails.git', :branch => 'master'
-gem 'journey',   :git => 'git://github.com/rails/journey.git', :branch => 'master'
-gem 'arel',      :git => 'git://github.com/rails/arel.git', :branch => 'master'
+gem 'rails',   '3.2.0'
+gem 'journey', '1.0.4'
+gem 'arel',    '3.0.2'
+gem 'foreman'
 
 gem 'pg'
 
