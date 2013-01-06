@@ -1,0 +1,13 @@
+!!!
+%html
+  %head
+    %title TEDx FiDi Women - San Francisco 2013
+    = stylesheet_link_tag  "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body{:id => params[:controller]}
+    #container
+      #header
+        = link_to image_tag('/images/TEDx_fidi_women_logo_wide_492_70.png'), root_url, :id => :logo
+      #content
+        = yield

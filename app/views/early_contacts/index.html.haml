@@ -1,0 +1,17 @@
+#form
+  = form_for record do |f|
+    .field.name
+      = f.label :name, "Your Name"
+      = f.text_field :name
+    .field.email
+      = f.label :email, "Your Email"
+      = f.text_field :email
+    .field.can_sponsor
+      = f.label :can_sponsor, "I'm interested in sponsoring this event"
+      = f.check_box :can_sponsor
+      = f.submit "Submit"
+    .field.submit
+
+#thanks
+  %h2 Got it!
+  %p We'll let you know as soon as registration opens for the 2013 event.
