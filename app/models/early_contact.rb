@@ -9,8 +9,12 @@ class EarlyContact < ActiveRecord::Base
   private
 
   def deliver_email
-    Mail::Message.new(subject: "TEDx pre-register",
-                      body:    "Just signed up: #{name} #{email}",
+    Mail::Message.new(subject: can_sponsor? ?
+                                "TEDx sponsorship lead" :
+                                "TEDx pre-register",
+                      body:    can_sponsor? ?
+                                 "#{name} #{email} might want to be a sponsor" :
+                                 "Just signed up: #{name} #{email}",
                       sender:  "noreply@tedxfidiwomen.com",
                       to:      ENV['contact_emails'].split(',')).deliver
   end
