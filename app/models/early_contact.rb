@@ -15,6 +15,7 @@ class EarlyContact < ActiveRecord::Base
                       body:    can_sponsor? ?
                                  "#{name} #{email} might want to be a sponsor" :
                                  "Just signed up: #{name} #{email}",
+                      from:    "TEDx Website <noreply@tedxfidiwomen.com>",
                       sender:  "noreply@tedxfidiwomen.com",
                       to:      ENV['contact_emails'].split(',')).deliver
   end
