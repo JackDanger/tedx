@@ -6,8 +6,32 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body{:id => params[:controller]}
+    #fb-root
+    :javascript
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
     #container
       #header
         = link_to image_tag('/images/TEDx_fidi_women_logo_wide_492_70.png'), root_url, :id => :logo
+
       #content
+
         = yield
+
+        .fb-like{"data-href" => "http://tedxfidiwomen.com", "data-send" => true, "data-width" => 450, "data-show-faces" => "true"}
+    #footer
+      %ul
+        %li.brand.youtube
+          = link_to 'Videos', 'http://www.youtube.com/results?search_query=tedxfidiwomen'
+        %li.brand.facebook
+          = link_to 'Facebook', 'https://www.facebook.com/TEDxFiDiWomen'
+        %li.brand.twitter
+          = link_to 'Twitter', 'https://twitter.com/tedxfidiwomen'
+      %ul
+        %li= link_to '2012 Conference', 'http://www.ted.com/tedx/events/3654'
+        %li= link_to '2011 Conference', 'http://www.ted.com/tedx/events/6905'
