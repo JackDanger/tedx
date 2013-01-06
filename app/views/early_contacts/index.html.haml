@@ -1,11 +1,16 @@
-#form
+%div[record]
   = form_for record do |f|
+    .info
+      Enter your name and email if you want to be notified as soon
+      as conference registration opens for TEDxFiDiWomen 2013.
     .field.name
       = f.label :name, "Your Name"
       = f.text_field :name
     .field.email
       = f.label :email, "Your Email"
       = f.text_field :email
+      #missing_email
+        Please enter a valid email address
     .field.can_sponsor
       = f.label :can_sponsor, "I'm interested in sponsoring this event"
       = f.check_box :can_sponsor
@@ -13,5 +18,7 @@
     .field.submit
 
 #thanks
-  %h2 Got it!
-  %p We'll let you know as soon as registration opens for the 2013 event.
+  %h1 Got it!
+  %p
+    You'll be the first to find out about the venue, speaker lineup,
+    and registration for the 2013 conference.

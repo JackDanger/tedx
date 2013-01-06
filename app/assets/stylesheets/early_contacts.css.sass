@@ -3,18 +3,24 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #early_contacts
-  #form
-    display: block
-    margin: 2em 0
-    padding: 30px
-    font-size: 22px
+  #early_contact_new
+    form
+      display: block
+      margin: 2em 0
+      padding: 30px
+      background-color: #F9F9F9
 
-    border: 1px solid #EE281E
-    -webkit-border-radius: 16px
-    -moz-border-radius: 16px
-    border-radius: 16px
+      border: 4px solid #EAEAEA
+      -webkit-border-radius: 16px
+      -moz-border-radius: 16px
+      border-radius: 16px
 
+    .info
+      float: right
+      width: 250px
 
+    .field
+      font-size: 22px
     .field.name,
     .field.email
       label, input
@@ -25,9 +31,17 @@
         width: 140px
     .field.can_sponsor
       label
-        font-size: 16px
+        font-size: 13px
     .field.submit
       font-size: 22px
 
+  #missing_email
+    display: none
+    color: red
+    font-size: 15px
+
   #thanks
     display: none
+    padding: 30px
+    h1
+      font-size: 45px
