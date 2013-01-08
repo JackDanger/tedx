@@ -7,8 +7,11 @@ gem 'haml'
 gem 'foreman'
 
 gem 'thin'
-
 gem 'pg'
+
+group :test do
+  gem 'rspec'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
