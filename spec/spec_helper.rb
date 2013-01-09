@@ -16,5 +16,5 @@ RSpec.configure do |config|
   config.order = 'random'
 end
 
-require 'rspec/rails'
 require File.expand_path('../../config/environment', __FILE__)
+require 'rspec/rails'
