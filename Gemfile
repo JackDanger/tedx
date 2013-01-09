@@ -11,6 +11,7 @@ gem 'pg'
 
 group :test do
   gem 'rspec'
+  gem 'rspec-rails'
 end
 
 # Gems used only for assets and not required
