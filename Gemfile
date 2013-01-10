@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails',   '3.2.0'
+gem 'rails',   '3.2.11'
 gem 'journey', '1.0.4'
 gem 'arel',    '3.0.2'
 gem 'haml'
